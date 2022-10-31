@@ -1,6 +1,6 @@
 # flight_booking_app
 
-A new Flutter project.
+A flutter app based on a tutorial from youtube.
 
 ## Getting Started
 
