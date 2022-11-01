@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flight_booking_app/Screens/home_screen.dart';
+import 'package:flight_booking_app/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 0;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
+    const HomeScreen(),
     const Text("Search"),
     const Text("Tickets"),
     const Text("Profile")
@@ -40,7 +41,7 @@ class _BottomBarState extends State<BottomBar> {
         elevation: 10,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: Colors.blueGrey,
+        selectedItemColor: Styles.primaryColor,
         type: BottomNavigationBarType.fixed,
         unselectedItemColor: const Color(0xFF526480),
         items: const [
