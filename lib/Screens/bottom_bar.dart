@@ -1,5 +1,6 @@
 // ignore_for_file: avoid_print
 
+import 'package:flight_booking_app/Screens/home_screen.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class _BottomBarState extends State<BottomBar> {
   int _selectedIndex = 2;
 
   static final List<Widget> _widgetOptions = <Widget>[
-    const Text("Home"),
+    HomeScreen(),
     const Text("Search"),
     const Text("Tickets"),
     const Text("Profile")
@@ -49,8 +50,7 @@ class _BottomBarState extends State<BottomBar> {
           BottomNavigationBarItem(
               icon: Icon(FluentSystemIcons.ic_fluent_home_regular),
               activeIcon: Icon(FluentSystemIcons.ic_fluent_home_filled),
-              label: "Home"), //home button
-
+              label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(FluentSystemIcons.ic_fluent_search_regular),
               activeIcon: Icon(FluentSystemIcons.ic_fluent_search_filled),
