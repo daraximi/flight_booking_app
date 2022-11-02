@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, avoid_unnecessary_containers
 
+import 'package:flight_booking_app/Screens/ticket_view.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flight_booking_app/utils/app_styles.dart';
@@ -86,6 +87,8 @@ class HomeScreen extends StatelessWidget {
                     )
                   ],
                 )),
+            const Gap(15),
+            TicketView()
           ],
         ));
   }
