@@ -3,6 +3,7 @@
 import 'package:flight_booking_app/Screens/hotel_screen.dart';
 import 'package:flight_booking_app/Screens/ticket_view.dart';
 import 'package:flight_booking_app/utils/app_info_list.dart';
+import 'package:flight_booking_app/widgets/double_text_widget.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flight_booking_app/utils/app_styles.dart';
@@ -71,22 +72,7 @@ class HomeScreen extends StatelessWidget {
                           ],
                         )),
                     Gap(40),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Upcoming Flights",
-                          style: Styles.headLineStyle2,
-                        ),
-                        InkWell(
-                            onTap: () {
-                              //print("You are tapped");
-                            },
-                            child: Text("View all",
-                                style: Styles.textStyle
-                                    .copyWith(color: Styles.primaryColor)))
-                      ],
-                    )
+                    AppDoubleText(bigText: "Upcoming flights", smallText: "view all")
                   ],
                 )),
             const Gap(15),
@@ -99,22 +85,7 @@ class HomeScreen extends StatelessWidget {
             const Gap(15),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
-              child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Hotels",
-                            style: Styles.headLineStyle2,
-                          ),
-                          InkWell(
-                              onTap: () {
-                                //print("You are tapped");
-                              },
-                              child: Text("View all",
-                                  style: Styles.textStyle
-                                      .copyWith(color: Styles.primaryColor)))
-                        ],
-                      ),
+              child: AppDoubleText(bigText: "Hotels", smallText: "view all"),
             ),
             const Gap(15),
             SingleChildScrollView(
