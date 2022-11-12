@@ -1,9 +1,10 @@
-// ignore_for_file: avoid_unnecessary_containers
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flight_booking_app/Screens/ticket_view.dart';
 import 'package:flight_booking_app/utils/app_info_list.dart';
 import 'package:flight_booking_app/utils/app_layout.dart';
 import 'package:flight_booking_app/utils/app_styles.dart';
+import 'package:flight_booking_app/widgets/column_layout.dart';
 import 'package:flight_booking_app/widgets/ticket_tabs.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
@@ -16,11 +17,14 @@ class TicketScreen extends StatelessWidget {
     final size = AppLayout.getSize(context);
 
     return Scaffold(
-      body: Stack(children: [
-        ListView(
+      body: Stack(
+        
+        children: [
+        ListView(          
           // ignore: prefer_const_literals_to_create_immutables
           padding:EdgeInsets.symmetric(vertical:  AppLayout.getHeight(20), horizontal: AppLayout.getHeight(20)),
           children: [
+            
             Gap(AppLayout.getHeight(40)),
             Text("Tickets", style: Styles.headLineStyle,),
             Gap(AppLayout.getHeight(20)),
@@ -31,7 +35,7 @@ class TicketScreen extends StatelessWidget {
               child: TicketView(ticket: ticketList[0], isColor: true,),
             ),
             Container(
-              //margin: EdgeInsets.only(right:AppLayout.getHeight(15), left: AppLayout.getHeight(15)),
+              margin: EdgeInsets.only(right:AppLayout.getHeight(15), left: AppLayout.getHeight(15)),
               padding: EdgeInsets.symmetric(horizontal: 15),
               color: Colors.white,
               child: 
@@ -39,15 +43,16 @@ class TicketScreen extends StatelessWidget {
                 // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Column(
-                        children: [
-                          Text("Flutter DB", style: Styles.headLineStyle3),
-                          Gap(AppLayout.getHeight(5)),
-                          Text("Passenger", style: Styles.headLineStyle3),
-                          Gap(AppLayout.getHeight(5))
-                        ],
-                      )
+                      AppColumnLayout(
+                        firstText: "Flutter DB", 
+                        secondText: "Passenger",
+                        alignment: CrossAxisAlignment.start),
+                      AppColumnLayout(
+                        firstText: "5221 345678", 
+                        secondText: "passport",
+                        alignment: CrossAxisAlignment.end)
                     ],
                   )
                 ]
