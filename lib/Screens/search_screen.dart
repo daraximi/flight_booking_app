@@ -75,9 +75,10 @@ class SearchScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(
                                   AppLayout.getHeight(12)),
-                              image: const DecorationImage(
+                              image:DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: AssetImage("assets/images/sit.jpg"))),
+                                  // ignore: unnecessary_const
+                                  image:AssetImage("assets/images/sit.jpg"))),
                         ),
                         Gap(AppLayout.getHeight(12)),
                         Text(

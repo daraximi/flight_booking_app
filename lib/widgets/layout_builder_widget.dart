@@ -24,7 +24,7 @@ class AppLayoutBuilderWidget extends StatelessWidget {
                         decoration: BoxDecoration(
                             color: isColor == null
                                 ? Colors.white
-                                : Colors.grey.shade300)),
+                                : Colors.grey.shade600)),
                   )),
         );
       },

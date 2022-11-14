@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flight_booking_app/Screens/home_screen.dart';
+import 'package:flight_booking_app/Screens/profile_screen.dart';
 import 'package:flight_booking_app/Screens/search_screen.dart';
 import 'package:flight_booking_app/Screens/ticket_screen.dart';
 import 'package:flight_booking_app/utils/app_styles.dart';
@@ -21,7 +22,7 @@ class _BottomBarState extends State<BottomBar> {
     const HomeScreen(),
     const SearchScreen(),
     const TicketScreen(),
-    const Text("Profile")
+    const ProfileScreen()
   ];
 
   void _onItemTapped(int index) {
