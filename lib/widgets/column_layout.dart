@@ -6,22 +6,24 @@ import 'package:gap/gap.dart';
 class AppColumnLayout extends StatelessWidget {
   final String firstText, secondText;
   final CrossAxisAlignment alignment;
+  final bool? isColor;
   const AppColumnLayout(
-      {Key? key, 
-      required this.firstText, 
+      {Key? key,
+      required this.firstText,
       required this.secondText,
-      required this.alignment      
-      })
+      required this.alignment, 
+      this.isColor})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: alignment,
+      //style: isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white): Styles.headLineStyle3,
       children: [
-        Text(firstText, style: Styles.headLineStyle3),
+        Text(firstText, style: isColor==null? Styles.headLineStyle3.copyWith(color: Colors.white): Styles.headLineStyle3),
         Gap(AppLayout.getHeight(5)),
-        Text(secondText, style: Styles.headLineStyle3),
+        Text(secondText, style: isColor==null? Styles.headLineStyle4.copyWith(color: Colors.white): Styles.headLineStyle4),
         Gap(AppLayout.getHeight(5))
       ],
     );
